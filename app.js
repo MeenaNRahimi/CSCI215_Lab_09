@@ -22,5 +22,8 @@ app.post('/myPost', function(req, res) {
     console.log('post called. Returning data');
     console.log(req.body.firstname);
     console.log(req.body.lastname);
+    console.log(req.fullname);
     res.json({"testdata" : "This is data."});
 });
+
+app.use(express.static("public"));
